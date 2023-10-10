@@ -10,13 +10,15 @@ import "solidity-coverage";
 const chainIds = {
   eth_goerli_id: 5,
   eth_sepolia_id: 11155111,
+  eth_ganache_id: 5777,
 };
 
 const {
   SIGNER_PRIVATE_KEY,
   ETH_GOERLI_TESTNET_RPC,
   ETH_SCAN_API_KEY,
-  ETH_SEPOLIA_TESTNET_RPC
+  ETH_SEPOLIA_TESTNET_RPC,
+  ETH_GANACHE_TESTNET_RPC
 } = process.env;
 
 const config: HardhatUserConfig = {
@@ -30,6 +32,12 @@ const config: HardhatUserConfig = {
     }
   },
   networks: {
+    localhost: {
+      url: ETH_GANACHE_TESTNET_RPC,
+      chainId: chainIds.eth_ganache_id,
+      gas: 70000,
+      gasPrice: 500000000,
+    },
     goerli: {
       url: ETH_GOERLI_TESTNET_RPC,
       chainId: chainIds.eth_goerli_id,
