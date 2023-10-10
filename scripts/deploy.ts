@@ -10,7 +10,7 @@ async function main() {
 
   const overrides = {
     gasPrice: ethers.utils.parseUnits("1", "gwei"),
-    gasLimit: 70000,
+    gasLimit: 2000000,
   };
 
   const LockFactory = await ethers.getContractFactory("Lock");
