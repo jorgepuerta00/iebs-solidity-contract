@@ -25,6 +25,7 @@ contract Lock {
 
     function extendLock(uint newUnlockTime) public {
         require(newUnlockTime > unlockTime, "New unlock time should be in the future");
+        require(newUnlockTime - unlockTime <= 365 days, "Lock extension can't exceed 1 year");
         require(msg.sender == owner, "You aren't the owner");
         unlockTime = newUnlockTime;
         emit LockExtended(unlockTime);
