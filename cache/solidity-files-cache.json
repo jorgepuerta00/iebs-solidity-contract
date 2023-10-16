@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/jorgepuerta/repos/iebs-solidity-contract/contracts/Lock.sol": {
-      "lastModificationDate": 1696971224011,
-      "contentHash": "e49ecc580ca605c7e9e943dede17073f",
+      "lastModificationDate": 1697485386198,
+      "contentHash": "d293f51fb3e54faa44a6066ea365f5c9",
       "sourceName": "contracts/Lock.sol",
       "solcConfig": {
         "version": "0.8.1",
@@ -28,9 +28,7 @@
           }
         }
       },
-      "imports": [
-        "hardhat/console.sol"
-      ],
+      "imports": [],
       "versionPragmas": [
         "0.8.1"
       ],
